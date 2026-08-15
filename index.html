@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matemática Babilónica - Actividades</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;background:#f5f3ee;color:#171717}
+  .wrap{max-width:900px;margin:auto;padding:18px}
+  h1{text-align:center;font-size:28px;margin:8px 0 20px}
+  .card{background:white;border:2px solid #222;border-radius:14px;padding:20px;margin-bottom:22px;box-shadow:0 3px 0 #222}
+  .title{background:#111;color:#fff;text-align:center;font-weight:800;font-size:25px;padding:12px;border-radius:8px;margin:-5px 0 18px}
+  .instructions{font-size:17px;line-height:1.45;text-align:center;border:1px solid #aaa;border-radius:10px;padding:12px;margin-bottom:16px}
+  .q{border:1px solid #bbb;border-radius:10px;padding:14px;margin:12px 0}
+  .q b{font-size:18px}
+  .options{display:flex;gap:12px;margin-top:12px}
+  .choice{
+    display:flex;align-items:center;gap:8px;
+    border:2px solid #222;background:#fff;border-radius:8px;
+    padding:10px 18px;font-weight:700;cursor:pointer;
+    user-select:none;
+  }
+  .choice:has(input:checked){background:#222;color:#fff}
+  .choice input{width:20px;height:20px;cursor:pointer} 
+  button{border:2px solid #222;background:#fff;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer}
+  button:hover{background:#eee}
+  .justify{width:100%;margin-top:10px;padding:9px;border:1px solid #aaa;border-radius:7px}
+  .signs{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:10px 0}
+  .wedge1{
+    display:inline-block;width:12px;height:35px;
+    background:#111;
+    clip-path:polygon(0 0,100% 0,72% 100%,28% 100%);
+  }
+  .wedge10{
+    display:inline-block;width:38px;height:22px;
+    background:#111;
+    clip-path:polygon(0 50%,72% 0,100% 0,100% 100%,72% 100%);
+  }
+  .symbol-group{display:flex;gap:7px;align-items:center}
+  .answer{font-size:20px;width:150px;padding:9px;border:2px solid #aaa;border-radius:7px}
+  .numrow{display:flex;align-items:center;justify-content:space-between;gap:15px;border:1px solid #bbb;border-radius:10px;padding:12px;margin:10px 0;flex-wrap:wrap}
+  .numanswer{display:flex;align-items:center;gap:10px}
+  .numfeedback{width:100%;font-weight:700;min-height:20px;margin-top:2px}
+  .input-correct{border-color:green !important;background:#effaf1}
+  .input-wrong{border-color:crimson !important;background:#fff0f0}
+  .feedback{font-weight:700;margin-top:7px;min-height:20px}
+  .correct{color:#16753a}.wrong{color:#a51d2d}
+  .remember{background:#f0eee8;border:1px dashed #555;padding:13px;border-radius:10px;line-height:1.5}
+  #result{display:none;text-align:center;font-size:21px;font-weight:800;padding:15px;border-radius:10px;background:#eee;margin-top:18px}
+  .submit{display:block;margin:20px auto 0;background:#111;color:#fff;font-size:18px}
+  .small{font-size:13px;color:#555;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>El sistema de numeración babilónico</h1>
+
+<section class="card">
+  <div class="title">ACTIVIDAD 1 · VERDADERO O FALSO</div>
+  <div class="instructions">
+    Leé las siguientes afirmaciones sobre el sistema de numeración babilónico y seleccioná si son
+    <b>VERDADERAS (V)</b> o <b>FALSAS (F)</b>. Luego, justificá brevemente tu respuesta.
+  </div>
+
+  <div class="q" data-answer="V">
+    <b>1. El sistema de numeración babilónico utilizaba el número 60 como base.</b>
+    <div class="options">
+      <label class="choice"><input type="radio" name="q1" value="V"> <span>V</span></label>
+      <label class="choice"><input type="radio" name="q1" value="F"> <span>F</span></label>
+    </div>
+    <input class="justify" placeholder="Justificación (opcional)">
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q" data-answer="V">
+    <b>2. El sistema babilónico era un sistema posicional.</b>
+    <div class="options">
+      <label class="choice"><input type="radio" name="q2" value="V"> <span>V</span></label>
+      <label class="choice"><input type="radio" name="q2" value="F"> <span>F</span></label>
+    </div>
+    <input class="justify" placeholder="Justificación (opcional)">
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q" data-answer="F">
+    <b>3. Una cuña vertical representaba 10 unidades.</b>
+    <div class="options">
+      <label class="choice"><input type="radio" name="q3" value="V"> <span>V</span></label>
+      <label class="choice"><input type="radio" name="q3" value="F"> <span>F</span></label>
+    </div>
+    <input class="justify" placeholder="Justificación (opcional)">
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q" data-answer="V">
+    <b>4. Una cuña horizontal representaba 10 unidades.</b>
+    <div class="options">
+      <label class="choice"><input type="radio" name="q4" value="V"> <span>V</span></label>
+      <label class="choice"><input type="radio" name="q4" value="F"> <span>F</span></label>
+    </div>
+    <input class="justify" placeholder="Justificación (opcional)">
+    <div class="feedback"></div>
+  </div>
+
+  <div class="q" data-answer="F">
+    <b>5. El sistema sexagesimal babilónico surgió completamente de manera independiente de los conocimientos sumerios.</b>
+    <div class="options">
+      <label class="choice"><input type="radio" name="q5" value="V"> <span>V</span></label>
+      <label class="choice"><input type="radio" name="q5" value="F"> <span>F</span></label>
+    </div>
+    <input class="justify" placeholder="Justificación (opcional)">
+    <div class="feedback"></div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="title">ACTIVIDAD 2 · ¿QUÉ NÚMERO ES?</div>
+  <div class="instructions">
+    Observá los siguientes números escritos en el sistema babilónico y escribí qué número representan en nuestro sistema decimal.
+    <br><b>Recordá:</b> cuña vertical = 1 · cuña horizontal = 10.
+  </div>
+
+  <div class="numrow"><div><b>1.</b> <span class="signs"><span class="symbol-group"><i class="wedge10"></i><i class="wedge10"></i><i class="wedge10"></i></span><span class="symbol-group"><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i></span></span></div><div class="numanswer"><input class="answer" type="number" data-answer="34" placeholder="Número"></div><div class="numfeedback"></div></div>
+  <div class="numrow"><div><b>2.</b> <span class="signs"><span class="symbol-group"><i class="wedge10"></i><i class="wedge10"></i></span><span class="symbol-group"><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i></span></span></div><div class="numanswer"><input class="answer" type="number" data-answer="26" placeholder="Número"></div><div class="numfeedback"></div></div>
+  <div class="numrow"><div><b>3.</b> <span class="signs"><span class="symbol-group"><i class="wedge10"></i></span><span class="symbol-group"><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i></span></span></div><div class="numanswer"><input class="answer" type="number" data-answer="13" placeholder="Número"></div><div class="numfeedback"></div></div>
+  <div class="numrow"><div><b>4.</b> <span class="signs"><span class="symbol-group"><i class="wedge10"></i><i class="wedge10"></i><i class="wedge10"></i><i class="wedge10"></i></span><span class="symbol-group"><i class="wedge1"></i><i class="wedge1"></i></span></span></div><div class="numanswer"><input class="answer" type="number" data-answer="42" placeholder="Número"></div><div class="numfeedback"></div></div>
+  <div class="numrow"><div><b>5.</b> <span class="signs"><span class="symbol-group"><i class="wedge10"></i><i class="wedge10"></i><i class="wedge10"></i></span><span class="symbol-group"><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i><i class="wedge1"></i></span></span></div><div class="numanswer"><input class="answer" type="number" data-answer="37" placeholder="Número"></div><div class="numfeedback"></div></div>
+
+  <button type="button" class="submit" onclick="corregir()">CORREGIR ACTIVIDADES</button>
+  <div id="result"></div>
+</section>
+
+<div class="remember">
+  <b>💡 RECORDATORIO</b><br>
+  El sistema babilónico es de base 60. En una misma posición se pueden representar valores desde 0 hasta 59.
+</div>
+<p class="small">Actividad interactiva · se puede resolver desde celular, tablet o computadora.</p>
+</div>
+
+<script>
+function corregir() {
+  var puntaje = 0;
+  var preguntas = document.getElementsByClassName("q");
+
+  for (var i = 0; i < preguntas.length; i++) {
+    var q = preguntas[i];
+    var radios = q.getElementsByTagName("input");
+    var elegida = "";
+    for (var j = 0; j < radios.length; j++) {
+      if (radios[j].checked) {
+        elegida = radios[j].value;
+      }
+    }
+
+    var correcta = q.getAttribute("data-answer");
+    var feedback = q.getElementsByClassName("feedback")[0];
+
+    if (elegida === correcta) {
+      puntaje++;
+      feedback.innerHTML = "✓ CORRECTO";
+      feedback.className = "feedback correct";
+    } else if (elegida === "") {
+      feedback.innerHTML = "⚠ SIN RESPUESTA. La correcta es " + correcta;
+      feedback.className = "feedback wrong";
+    } else {
+      feedback.innerHTML = "✗ INCORRECTO. La correcta es " + correcta;
+      feedback.className = "feedback wrong";
+    }
+  }
+
+  var respuestas = document.getElementsByClassName("answer");
+
+  for (var k = 0; k < respuestas.length; k++) {
+    var input = respuestas[k];
+    var correctaNum = input.getAttribute("data-answer");
+    var fila = input.parentNode.parentNode;
+    var feedbackNum = fila.getElementsByClassName("numfeedback")[0];
+
+    input.className = "answer";
+
+    if (input.value !== "" && input.value === correctaNum) {
+      puntaje++;
+      input.className = "answer input-correct";
+      feedbackNum.innerHTML = "✓ CORRECTO";
+      feedbackNum.className = "numfeedback correct";
+    } else if (input.value === "") {
+      input.className = "answer input-wrong";
+      feedbackNum.innerHTML = "⚠ SIN RESPUESTA. La correcta es " + correctaNum;
+      feedbackNum.className = "numfeedback wrong";
+    } else {
+      input.className = "answer input-wrong";
+      feedbackNum.innerHTML = "✗ INCORRECTO. La correcta es " + correctaNum;
+      feedbackNum.className = "numfeedback wrong";
+    }
+  }
+
+  var resultado = document.getElementById("result");
+  resultado.style.display = "block";
+  resultado.innerHTML = "PUNTAJE FINAL: " + puntaje + " / 10";
+}
+</script>
+</body>
+</html>
